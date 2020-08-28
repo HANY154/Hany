@@ -1,0 +1,261 @@
+<html>
+<head><title>Your Ask</title>
+	
+ <meta charset="utf-8">	
+	<style>
+	body{
+			
+			background: #636e72;
+			}
+			
+			
+		.mine{
+			width: 70%;
+			margin: auto;
+			opacity: 20;
+			background: #636e72;
+			height: 100%
+			}
+			h4{
+			margin: 2px 5px 0 0;
+            text-align: right;
+			}	
+			#mydiv1, #mydiv2, #mydiv3, #mydiv4{
+			   position: fixed;
+				top: 30px;
+				width: 66% ;
+				margin: ; 
+				height: 50px;
+				word-wrap: break-word;
+			    box-shadow: 0 0 5px rgba(159,159,159,0.6);
+				border-radius: 7px;
+				background-color: #6c5ce7;
+				text-align: center;
+				z-index: 100001;
+				opacity: 1;
+				padding: 10px;
+			   font-size: 30px;
+			
+			}
+			select{
+			background: #636e72;
+			width: 200px;
+			height: 30px;
+			}
+			#mydegger{
+			border: 2px solid #1df703;
+			font-size: 30px;
+			width: 80%;
+			height: 80px;
+			margin-top: 50px;
+	        text-align: center;
+			vertical-align: middle;
+			margin:5px auto;
+			border-radius: 50px;
+			background: #6c5ce7;
+			display: none;
+			
+			}
+	
+	
+	</style>
+	
+	</head>
+<body>
+	
+	
+<div ><h1 id="mydegger"></h1></div>
+<!--	----------------1----------------- -->
+	<div class="mine">
+	<div id="a1">
+		
+	<h4 style="float: right;">ماذا تتعلم الان في برمجه الويب</h4>
+	
+	<select id="s1" onchange="myTest1();">
+	<option></option>
+	<option >Java</option>
+	<option>Javascript</option>
+	<option>css</option>
+	<option>HTML</option>
+	</select>
+	
+	<br>
+	<br>
+	<h1 id="h1" style="color: white;"></h1>
+				
+	</div>
+<!--		----------------2------------------->
+
+	<div id="a2">
+	<h4 style="float: right;">ماهي افضل لغات البرمجه الخاصه بالويب</h4>
+	
+	<select id="s2"  onchange="myTest2();">
+	<option></option>
+	<option >c#</option>
+	<option>Javascript</option>
+	<option>python</option>
+	<option>C#</option>	
+	</select>
+	<br>
+	<br>
+		
+	<h1 id="h2" style="color: white;"></h1>
+	</div>
+<!--	----------------3------------------->
+
+	<div id="a3">
+	<h4 style="float: right;">لبناء موقع يتميز بالحرك والديناميكيه ما هي<br> الغات التي يجب ان نستخدمها</h4>
+	<select id="s3"  onchange="myTest3();">
+	<option></option>
+	<option >Java</option>
+	<option>CSS</option>
+	<option>C++</option>
+	<option>HTML</option>
+	</select>
+	<br>
+	<br>
+		
+	<h1 id="h3" style="color: white;"></h1>
+	</div>
+<!--	-----------------4------------------->
+	
+	<div id="a4">
+	<h4 style="float: right;">لماذا تتعلم جافا سكرابت وفي ماذا تستخدم</h4>
+		<select id="s4" onchange="myTest4();">
+	<option></option>
+	<option >للوجهات</option>
+	<option>لانها تعطي الحركه للموقع</option>
+	<option>لانها تعطي مظهر جميل للموقع </option>
+	<option>للويب</option>
+	</select>
+	<br>
+	<br>
+	<h1 id="h4" style="color: white;"></h1>
+	</div>
+
+		</div>
+	
+	
+	<script>
+		//-----------1-------------//
+var degger=0;
+		function myTest1 () {
+		setInterval(hide1,1000);
+		var select=window.s1.value;	
+
+	if(select=="Javascript"){
+		window.h1.innerHTML="<span id='mydiv1'>" 
+		+ "الاجابه صحيحه </span>";
+		degger+=5;
+	}
+	else if(select==""){
+		window.h1.innerHTML="";	
+		}
+	else{
+		window.h1.innerHTML="<span id='mydiv1'      style='color:red;'>"  
+		+ "الاجابه خطأ</span>";
+		}
+		}
+//---------------2----------------//
+function myTest2 () {
+		setInterval(hide2,1000);
+		var select=window.s2.value;	
+
+	if(select=="Javascript"||select=="css"){
+
+		window.h2.innerHTML="<span id='mydiv2'>" 
+		+ "الاجابه صحيحه </span>";
+		degger+=5;
+	}
+	else if(select==""){
+		window.h2.innerHTML="";
+		}
+	else{
+		window.h2.innerHTML="<span id='mydiv2'      style='color:red;'>"  
+		+ "الاجابه خطأ</span>";
+		}}
+		
+		//----------------3---------------//
+function myTest3 () {
+		setInterval(hide3,1000);
+		var select=window.s3.value;	
+
+	if(select=="CSS"){		
+		window.h3.innerHTML="<span id='mydiv3'>" 
+		+ "الاجابه صحيحه </span>";
+	degger+=5;	
+	}
+	else if(select==""){
+		window.h3.innerHTML="";	
+		}
+	else{
+
+		window.h3.innerHTML="<span id='mydiv3'      style='color:red;'>"  
+		+ "الاجابه خطأ</span>";		
+		}
+		}
+		//-------------4---------------//
+function myTest4 () {
+		setInterval(hide4,1000);
+		var select=window.s4.value;	
+
+	if(select=="لانها تعطي الحركه للموقع"){
+		window.h4.innerHTML="<span id='mydiv4'>" 
+		+ "الاجابه صحيحه </span>";
+	degger+=5;	
+	}
+	else if(select==""){
+		window.h4.innerHTML="";
+		}
+	else{
+		window.h4.innerHTML="<span id='mydiv4'      style='color:red;'>"  
+		+ "الاجابه خطأ</span>";		
+		}
+		}
+		
+function hide1() {
+window.mydiv1.style.display='none';
+window.s1.value='';
+window.a1.style.display='none';
+}
+		function hide2() {
+			
+window.mydiv2.style.display='none';
+ window.s2.value='';
+window.a2.style.display='none';
+}
+		function hide3() {
+window.mydiv3.style.display='none';
+ window.s3.value='';
+window.a3.style.display='none';
+}
+		function hide4() {
+window.mydiv4.style.display='none';
+window.s3.value='';
+window.a4.style.display='none'; 
+		myDegger();	
+		}
+function myDegger() {
+	window.mydegger.style.display="block";
+window.mydegger.innerHTML=
+	 "Your Deggre Is "
+	+"<span style='color:#0f0'>"
+	+ degger
+	+"</span>"
+	+ " From <span style='color:red'>20</span>" 
+	+"<br>"
+	+ "GOOD LUCK ";
+
+}
+
+	
+	</script>
+	
+	
+	
+	</body>
+
+</html>	
+
+
+
